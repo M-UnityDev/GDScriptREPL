@@ -14,12 +14,13 @@ general/accessibility_support=2
 
 [application]
 
-config/name="GDScriptREPL"
+config/name="GDScREPL"
 run/main_scene="res://node.tscn"
 run/print_header=false
 config/features=PackedStringArray("4.5", "GL Compatibility")
 run/low_processor_mode=true
 run/delta_smoothing=false
+boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/show_image=false
 boot_splash/fullsize=false
 boot_splash/use_filter=false
@@ -35,7 +36,9 @@ window/size/viewport_width=1
 window/size/viewport_height=1
 window/size/resizable=false
 window/energy_saving/keep_screen_on=false
+window/subwindows/embed_subwindows=false
 window/frame_pacing/android/enable_frame_pacing=false
+window/dpi/allow_hidpi=false
 display_server/driver="headless"
 display_server/driver.windows="headless"
 display_server/driver.linuxbsd="headless"
@@ -43,10 +46,15 @@ display_server/driver.android="headless"
 display_server/driver.ios="headless"
 display_server/driver.visionos="headless"
 display_server/driver.macos="headless"
+window/vsync/vsync_mode=0
 
 [gui]
 
 fonts/dynamic_fonts/use_oversampling=false
+
+[input_devices]
+
+pointing/emulate_mouse_from_touch=false
 
 [network]
 
@@ -60,5 +68,16 @@ common/enable_object_picking=false
 
 [rendering]
 
+occlusion_culling/jitter_projection=false
+textures/canvas_textures/default_texture_filter=0
+rendering_device/fallback_to_vulkan=false
+rendering_device/fallback_to_d3d12=false
+rendering_device/fallback_to_opengl3=false
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/compress_with_gpu=false
+textures/vram_compression/cache_gpu_compressor=false
+shader_compiler/shader_cache/enabled=false
+shader_compiler/shader_cache/compress=false
+shader_compiler/shader_cache/use_zstd_compression=false
+shader_compiler/shader_cache/strip_debug=true
