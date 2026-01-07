@@ -1,10 +1,10 @@
-# GDScriptREPL
+# GDScREPL
 Godot CLI REPL inspired by Python's default one
 
 # Usage 
 
 ```bash
-./GDScriptREPL.x86_64 /path/to/script
+./GDScREPL.x86_64 /path/to/script
 ```
 
 # Examples
