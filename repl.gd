@@ -70,7 +70,8 @@ func run_script_from_string(code: String) -> bool:
 	if script.reload() != OK:
 		return true
 	script_instance = ClassDB.instantiate(script.get_instance_base_type())
-	add_child(script_instance)
+	if script.get_instance_base_type() == "Node":
+		add_child(script_instance)
 	script_instance.set_script(script)
 	await script_instance.tree_exited
 	return true
